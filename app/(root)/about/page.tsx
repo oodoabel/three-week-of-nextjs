@@ -1,7 +1,14 @@
-import React from "react";
+import Hello from "@/app/components/hello";
 
-const Page = () => {
-  return <div>Page</div>;
-};
+export default function Home() {
+  // throw new Error("NOT IMPLEMENTED");
 
-export default Page;
+  return (
+    <>
+      <div className="grid grid-rows-[20px_1fr_20px] text-3xl items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+        <h1>Welcome to next js</h1>
+        <Hello />
+      </div>
+    </>
+  );
+}
