@@ -35,17 +35,17 @@ export default async function Home() {
 
   return (
     <>
-      <div className="grid grid-rows-[20px_1fr_20px] text-2xl items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <div className="grid grid-rows-[20px_1fr_20px] lg:px-[30rem] text-2xl items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
         <h1 className="text-blue-700 font-sans lg:text-5xl">
           WELCOME TO MOVIE HOME
         </h1>
-        <div className="">
-          <ul className="flex flex-wrap text-sm lg:text-3xl">
+        <div className="flex flex-wrap overflow-hidden">
+          <ul className="flex flex-row flex-wrap text-sm lg:text-3xl">
             {/* {data.map({movie}:{movie: string} => (
               <li> <h1>{movie.title}</h1> </li>
             ))} */}
             {data.results.map((movie: Movie) => (
-              <li className="m-1" key={movie.id}>
+              <li className="m-3" key={movie.id}>
                 <MovieCard
                   id={movie.id}
                   poster_path={movie.poster_path}
